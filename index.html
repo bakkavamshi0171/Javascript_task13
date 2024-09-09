@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            padding: 10%;
+        }
+        button{
+            padding: 10px;
+            background-color: azure;
+            border-radius: 15px;
+        }
+        h1{
+            font-size: x-large;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body>
+    
+ 
+    <button onclick="generateOtp()">Generate OTP</button>
+    <h1 id="ids-display"></h1>
+    <script>
+        function generateOtp(){
+            let num = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+            // let num = Math.floor( 1 + Math.random()* 900000);
+            document.querySelector("#ids-display").innerText = num;
+
+            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
+
+
