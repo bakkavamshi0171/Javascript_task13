@@ -28,12 +28,3 @@ for (let i of arr5){
 }
 console.log(arr6);
 
-// generate random otp 6 digit num using math.random
-function generateOtp(){
-    let num = Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
-    // let num = Math.floor( 1 + Math.random()* 900000);
-    document.querySelector("#ids-display").innerText = num;
-
-    const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-    document.body.style.backgroundColor = randomColor;
-}
